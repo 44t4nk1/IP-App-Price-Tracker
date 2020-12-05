@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pricetracker/animations/BounceIn.dart';
+import 'package:pricetracker/screens/initialScreen.dart';
 import 'package:pricetracker/screens/signupScreen.dart';
 
 class LoginPage extends StatefulWidget {
@@ -212,7 +213,14 @@ class _LoginPageState extends State<LoginPage> {
                 width: double.infinity,
                 margin: EdgeInsets.symmetric(horizontal: size.width * 25 / 100),
                 child: FlatButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      BounceIn(
+                        widget: InitialScreen(),
+                      ),
+                    );
+                  },
                   child: Container(
                     alignment: Alignment.center,
                     width: double.infinity,

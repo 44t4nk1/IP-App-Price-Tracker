@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pricetracker/animations/BounceIn.dart';
+import 'package:pricetracker/screens/initialScreen.dart';
 
 class SignUpScreen extends StatefulWidget {
   @override
@@ -510,7 +512,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 width: double.infinity,
                 margin: EdgeInsets.symmetric(horizontal: size.width * 25 / 100),
                 child: FlatButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      BounceIn(
+                        widget: InitialScreen(),
+                      ),
+                    );
+                  },
                   child: Container(
                     alignment: Alignment.center,
                     width: double.infinity,
